@@ -123,4 +123,76 @@ puts my_name.include?("Sam")
 puts "Vowels : " + my_name.count("aeiou").to_s
 puts "Consonants : " + my_name.count("^aeiou").to_s # ^ is opposite, so find everything but "aeiou"
 
+puts my_name.start_with?('S')
+puts "Index : " + my_name.index('S').to_s
+
+my_name_array = my_name.split("") #here i am splitting everything
+puts my_name_array
+
+#objects
+class Animal
+    def initialize
+        puts "Creating a new animal"
+    end
+
+    #setter
+    def set_name(new_name)
+        @name = new_name
+    end
+
+    #getter
+    def get_name
+        @name
+    end
+    #also can get a value with 
+    def name
+        @name
+    end
+
+    #also get setter with
+
+
+    def name=(new_name)
+        if new_name.is_a?(Numeric) #if new_name is type Numeric
+            puts "Name can't be a number" 
+        else
+            @name = new_name #assign new name
+        end
+    end
+
+end #end of classs
+
+cat = Animal.new
+cat.set_name("this is the cats set name")
+puts cat.get_name
+puts cat.name
+cat.name = "Donut"
+puts cat.name
+
+class Dog
+    attr_accessor :name, :height, :weight #generate all getters and setters
+     
+    def bark 
+        return "Bark!"
+    end
+end
+
+mona = Dog.new
+mona.name = "Mona Dog"
+puts mona.name
+
+class Yorkie < Dog # < is for inheriting from class (Dog) 
+    def bark
+        return "Yap Yap Yap Yap!!"
+    end
+end
+
+kuma = Yorkie.new 
+kuma.name = "Kuma Dog"
+puts kuma.name
+puts kuma.bark
+
+
+
+
 
