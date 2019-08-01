@@ -93,5 +93,34 @@ end
 puts add_nums("Hi, ", "there")
 
 #exceptions
-#test update for github desktop
+print "Enter a number: "
+first_num = gets.to_i
+print "Enter another number: "
+second_num = gets.to_i
+
+begin
+    answer = first_num / second_num
+rescue #if there is an error
+    puts "You can't divide by zero"
+    exit
+end
+
+#raise is for throwing own error
+age = 12
+def check_age(age) 
+    raise ArgumentError, "Enter a Positive Number" unless age > 0
+end
+#rescue
+begin
+    check_age(-1)
+rescue ArgumentError #catching an argument error
+    puts "-1, that is an impossible age"    #if it is triggered run puts
+end
+
+my_name = "Salvatore"
+puts my_name.size
+puts my_name.include?("Sam")
+puts "Vowels : " + my_name.count("aeiou").to_s
+puts "Consonants : " + my_name.count("^aeiou").to_s # ^ is opposite, so find everything but "aeiou"
+
 
