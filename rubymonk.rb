@@ -39,3 +39,34 @@ end
 
 #reverse index lookup
 [1, 2, 3, 4, 5][-5]
+
+# .map or .collect - transforms an array 
+
+[1, 2, 3, 4, 5].map { |i| i + 1 }
+# [2, 3, 4, 5, 6]
+
+#filtering elements of an array
+#selecting the even numbers
+[1,2,3,4,5,6].select { | number |
+    number % 2 == 0
+}
+
+#deleting from an array
+[1,2,3,4,5,6].delete(5) #will delete 5
+
+#deleting all the elements less than 4
+[1,2,3,4,5,6].delete_if { |i| 
+    i < 4
+}
+
+#loops
+#for loops 
+array = [1,2,3,4,5] 
+for i in array do
+    puts i
+end
+
+#each
+array.each do |i| 
+    puts i
+end
