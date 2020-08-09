@@ -44,3 +44,6 @@ puts people.empty?.to_s
 puts people.size.to_s
 
 #.delete()
+
+
+#Hash built in methods
