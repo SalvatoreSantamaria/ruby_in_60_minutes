@@ -70,3 +70,30 @@ end
 array.each do |i| 
     puts i
 end
+
+#hash
+restaurant_menu = {
+  "Ramen" => 3,
+   "Dal Makhani" => 4,
+   "Tea" => 2
+}
+#finding a value
+# restaurant_menu["Ramen"]
+#returns 3
+
+#set a value 
+# restaurant_menu["Ramen"] = 4
+
+#iterate over a hash
+# restaurant_menu.each do | item, price |
+#   puts "#{item}: $#{price}"
+# end
+
+#changing values in a hash
+# restaurant_menu = { "Ramen" => 3, "Dal Makhani" => 4, "Coffee" => 2 }
+# restaurant_menu.each do |item, price|
+#   restaurant_menu[item] = price + (price * 0.1)
+# end
+
+#.keys returns all the keys in an array
+#.values returns all the values in an array
