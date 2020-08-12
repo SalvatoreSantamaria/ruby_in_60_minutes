@@ -77,6 +77,17 @@ restaurant_menu = {
    "Dal Makhani" => 4,
    "Tea" => 2
 }
+
+restaurant_menu2 = {
+    :symbol1 => 1,
+    :symbol2 => 2, 
+    :symbol3 => 3,
+    :symbol4 => 4
+}
+
+restaurant_menu2.each do | a, b |
+    puts "#{a}, #{b}"
+end
 #finding a value
 # restaurant_menu["Ramen"]
 #returns 3
@@ -97,3 +108,12 @@ restaurant_menu = {
 
 #.keys returns all the keys in an array
 #.values returns all the values in an array
+
+#classes
+#test classes with 
+puts 1.class
+puts "".class
+puts [].class
+puts 1.is_a?(Integer)
+puts 1.is_a?(String)
+
