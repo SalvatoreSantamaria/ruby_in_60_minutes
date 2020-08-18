@@ -20,3 +20,9 @@
 def get_only_evens(nums)
 	 nums.select.each_with_index{ |x,i| i % 2 == 0 and x.even? }
 end
+
+# Create a function that takes an array as an argument 
+# and returns true or false depending on whether the average of all elements in the array is a whole number or not.
+def is_avg_whole?(arr)
+  arr.reduce(&:+) % arr.length == 0
+end
