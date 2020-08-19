@@ -26,3 +26,18 @@ end
 def is_avg_whole?(arr)
   arr.reduce(&:+) % arr.length == 0
 end
+
+#Return true if the marathon is 25 miles long, otherwise, return false.
+#marathon_distance([1, 2, 3, 4]) ➞ false
+def marathon_distance(d)
+	abs_array = d.map { |i| 
+		i.abs
+	}
+	abs_array.reduce(&:+) == 25
+end
+
+#Given an array and an integer n, return the sum of the first n numbers in the array.
+#slice_sum([1, 3, 2], 2) ➞ 4
+def slice_sum(arr, n)
+	n.zero? ? 0 : arr[0...n].reduce(:+)
+end
