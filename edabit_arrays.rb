@@ -41,3 +41,30 @@ end
 def slice_sum(arr, n)
 	n.zero? ? 0 : arr[0...n].reduce(:+)
 end
+
+# Create a function that searches for the index of a given item in an array. 
+# If the item is present, it should return the index, otherwise, it should return -1.
+def search(arr, item)
+	arr.index(item) || -1
+end
+
+# Given an array of boxes, 
+# create a function that returns the total volume of all those boxes combined together. 
+# A box is represented by an array with three elements: length, width and height.
+# total_volume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]) ➞ 63
+def total_volume(*boxes)
+  boxes.map { |box| box.reduce(&:*) }.reduce(&:+)
+end
+
+# Remove enemies from the array of people, even if the enemy shows up twice.
+# remove_enemies(["Adam", "Emmy", "Tanya", "Emmy"], ["Emmy"]) ➞ ["Adam", "Tanya"]
+def remove_enemies(names, enemies)
+	names - enemies
+end
+
+# Create a function that takes an array of numbers and returns the sum of the two lowest positive numbers.
+# sum_two_smallest_nums([19, 5, 42, 2, 77]) ➞ 7
+def sum_two_smallest_nums(arr)
+	positive_nums = arr.select { |num|  num > 0  } 
+	positive_nums.min(2).reduce(&:+)
+end
